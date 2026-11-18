@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-PT"><head><meta charset="utf-8"><title>Mockups · Animalec</title>
+<style>
+body{font-family:"DejaVu Sans",Arial,sans-serif;margin:0;padding:26px;background:#eceff1;color:#212529}
+h1{margin:0;font-size:22px;color:#2c3e50}.sub{margin:4px 0 18px;color:#6c757d;font-size:13px}
+.folha{display:none}.folha.ativa{display:block}
+.linha{display:flex;gap:22px;align-items:flex-start}
+figure{margin:0;background:#fff;border-radius:10px;padding:10px;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+figcaption{font-size:12px;color:#555;margin-top:6px}
+.desk img{width:820px;display:block;border:1px solid #ddd}
+.mob img{width:250px;display:block;border:8px solid #222;border-radius:26px}
+.guia{width:300px;background:#fff;border-radius:10px;padding:14px;box-shadow:0 4px 14px rgba(0,0,0,.08);font-size:12px}
+.guia h2{font-size:14px;margin:0 0 8px;color:#2c3e50}.guia h3{font-size:12px;margin:12px 0 6px;color:#6c757d;text-transform:uppercase;letter-spacing:.05em}
+.cores{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.cor{border-radius:6px;padding:20px 4px 4px;color:#fff;font-size:10px}
+.selos span{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:bold;margin:2px}
+.btns span{display:inline-block;padding:5px 10px;border-radius:6px;border:1.5px solid #1abc9c;color:#148f77;font-weight:bold;font-size:10px;margin:2px;text-transform:uppercase}
+.guia ul{padding-left:16px;margin:4px 0}.guia li{margin-bottom:4px}
+.col{display:flex;flex-direction:column;gap:16px}
+</style></head><body>
+<h1 id="titulo"></h1><p class="sub">Mockup (alta fidelidade, estático) · Animalec, página de administração · Tarefa 3.1 b · mesmo conteúdo do wireframe, agora com cor, tipografia e ícones finais</p>
+
+<section class="folha" id="patrocinadores" data-titulo="Mockup 1 · Patrocinadores (browser e telemóvel)">
+ <div class="linha">
+  <div class="col">
+   <figure class="desk"><img src="ecras/desk-patrocinadores.png" alt=""><figcaption>Browser · lista com filtros, selos de modalidade e total de apoio ativo</figcaption></figure>
+   <figure class="desk"><img src="ecras/desk-dialogo-ver.png" alt=""><figcaption>Browser · janela "VER" (detalhe sem sair da lista)</figcaption></figure>
+  </div>
+  <div class="col">
+   <figure class="mob"><img src="ecras/mob-patrocinadores.png" alt=""><figcaption>Telemóvel · tabela em cartões</figcaption></figure>
+   <figure class="mob"><img src="ecras/mob-patrocinador-form.png" alt=""><figcaption>Telemóvel · formulário numa coluna</figcaption></figure>
+  </div>
+  <aside class="guia"><h2>Guia visual</h2>
+   <h3>Cores (tema do Animalec)</h3>
+   <div class="cores"><div class="cor" style="background:#1abc9c">#1abc9c ação</div><div class="cor" style="background:#2c3e50">#2c3e50 estrutura</div><div class="cor" style="background:#148f77">#148f77 novo</div><div class="cor" style="background:#f39c12">#f39c12 alerta</div><div class="cor" style="background:#dc3545">#dc3545 remover</div><div class="cor" style="background:#f4f6f7;color:#333">#f4f6f7 fundo</div></div>
+   <h3>Tipografia</h3><p><b style="font-family:Montserrat,Arial">Montserrat</b> títulos em maiúsculas · <span style="font-family:Lato,Arial">Lato</span> texto e formulários</p>
+   <h3>Selos de modalidade</h3><div class="selos"><span style="background:#e8f8f5;color:#117a65">Apadrinhamento anual</span><span style="background:#fef5e7;color:#9c640c">Donativo pontual</span><span style="background:#ebf5fb;color:#1f618d">Patrocínio de quiz</span><span style="background:#eee;color:#777">Inativo</span></div>
+   <h3>Botões (estilo do livro)</h3><div class="btns"><span> Editar</span><span> Ver</span><span style="border-color:#dc3545;color:#dc3545"> Remover</span><span style="background:#1abc9c;color:#fff"> Adicionar</span></div>
+   <h3>Decisões</h3><ul><li>Mantém o estilo do Animalec; o verde-escuro marca só o que é novo.</li><li>Cada modalidade tem cor própria para se ler a lista sem abrir registos.</li><li>Remover é o único botão vermelho e pede sempre confirmação.</li></ul>
+  </aside>
+ </div>
+</section>
+
+<section class="folha" id="especialistas" data-titulo="Mockup 2 · Especialistas e integração com os animais">
+ <div class="linha">
+  <div class="col">
+   <figure class="desk"><img src="ecras/desk-especialista-form.png" alt=""><figcaption>Browser · formulário de especialista (animais filtrados pela especialidade)</figcaption></figure>
+   <figure class="desk"><img src="ecras/desk-animais.png" alt=""><figcaption>Browser · bloco Animais com as colunas novas de patrocínio e validação</figcaption></figure>
+  </div>
+  <div class="col">
+   <figure class="mob"><img src="ecras/mob-especialistas.png" alt=""><figcaption>Telemóvel · especialistas em cartões</figcaption></figure>
+   <figure class="mob"><img src="ecras/mob-ficha-lince.png" alt=""><figcaption>Telemóvel · ficha pública com validação e padrinhos</figcaption></figure>
+   <figure class="mob"><img src="ecras/mob-menu.png" alt=""><figcaption>Telemóvel · menu recolhido</figcaption></figure>
+  </div>
+  <aside class="guia"><h2>Guia visual</h2>
+   <h3>Estados da validação científica</h3><div class="selos"><span style="background:#e8f8f5;color:#117a65">Validada · 02/10/2026</span><span style="background:#fdedec;color:#a93226">Revisão expirada</span><span style="background:#eee;color:#777">Sem especialista</span></div>
+   <h3>Decisões</h3><ul><li>O estado da ficha usa as mesmas cores em todo o lado (lista de especialistas, lista de animais e ficha pública).</li><li>No front-office o selo vira uma frase completa ("revisto por… em…"), porque o leitor é um aluno, não um gestor.</li><li>O bloco Animais ganha só duas colunas: a integração não muda a forma de trabalhar no back-office.</li></ul>
+  </aside>
+ </div>
+</section>
+<script>const id=location.hash.slice(1)||"patrocinadores";const s=document.getElementById(id);s.classList.add("ativa");document.getElementById("titulo").textContent=s.dataset.titulo;</script>
+</body></html>

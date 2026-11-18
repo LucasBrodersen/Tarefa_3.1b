@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel de gestão · Animalec</title>
+  <link rel="icon" href="img/animalec.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-pagina="painel">
+  <header class="topo">
+    <div class="topo-interno">
+      <a class="marca" href="admin.html"><img src="img/animalec.png" alt=""><span>ANIMALEC<small>Gestão (back-office)</small></span></a>
+      <nav class="menu">
+        <ul>
+          <li><a href="admin.html" aria-current="page">Painel</a></li>
+          <li><a href="animais.html">Animais</a></li>
+          <li><a href="patrocinadores.html">Patrocinadores <span class="novo">NOVO</span></a></li>
+          <li><a href="especialistas.html">Especialistas <span class="novo">NOVO</span></a></li>
+          <li><a href="existente.html?bloco=utilizadores">Utilizadores</a></li>
+          <li><a href="existente.html?bloco=quizzes">Quizzes</a></li>
+          <li><a href="#" data-acao="sair">Sair</a></li>
+        </ul>
+      </nav>
+      <details class="menu-movel">
+        <summary>Menu</summary>
+        <ul>
+          <li><a href="admin.html" aria-current="page">Painel</a></li>
+          <li><a href="animais.html">Animais</a></li>
+          <li><a href="patrocinadores.html">Patrocinadores</a></li>
+          <li><a href="especialistas.html">Especialistas</a></li>
+          <li><a href="existente.html?bloco=utilizadores">Utilizadores</a></li>
+          <li><a href="existente.html?bloco=quizzes">Quizzes</a></li>
+          <li><a href="#" data-acao="sair">Sair</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+  <main id="conteudo">
+    
+    <div class="cabecalho-pagina">
+      <div><h1>Gestão do Animalec</h1><p>Escolha a área a gerir. As duas novas entidades estão assinaladas.</p></div>
+    </div>
+    <section class="painel">
+      <a class="bloco" href="existente.html?bloco=utilizadores">
+        <header><span>Utilizadores</span></header>
+        <div class="icone" aria-hidden="true"></div>
+        <div class="num"><span id="n-utilizadores">–</span></div>
+        <p class="desc">Contas de alunos e professores.</p>
+      </a>
+      <a class="bloco" href="animais.html">
+        <header><span>Animais</span></header>
+        <div class="icone" aria-hidden="true"></div>
+        <div class="num"><span id="n-animais">–</span></div>
+        <p class="desc">Fichas dos animais, agora com patrocínio e validação.</p>
+      </a>
+      <a class="bloco" href="existente.html?bloco=quizzes">
+        <header><span>Quizzes</span></header>
+        <div class="icone" aria-hidden="true"></div>
+        <div class="num"><span id="n-quizzes">–</span></div>
+        <p class="desc">Conjuntos de perguntas por nível.</p>
+      </a>
+      <a class="bloco" href="existente.html?bloco=questoes">
+        <header><span>Questões</span></header>
+        <div class="icone" aria-hidden="true"></div>
+        <div class="num"><span id="n-questoes">–</span></div>
+        <p class="desc">Banco de questões dos quizzes.</p>
+      </a>
+      <a class="bloco nova" href="patrocinadores.html">
+        <header><span>Patrocinadores</span><span class="etiqueta-nova">NOVO</span></header>
+        <div class="icone" aria-hidden="true"></div>
+        <div class="num"><span id="n-patrocinadores">–</span></div>
+        <p class="desc">Entidades que apadrinham animais ou patrocinam quizzes (ativos).</p>
+      </a>
+      <a class="bloco nova" href="especialistas.html">
+        <header><span>Especialistas</span><span class="etiqueta-nova">NOVO</span></header>
+        <div class="icone" aria-hidden="true"></div>
+        <div class="num"><span id="n-especialistas">–</span></div>
+        <p class="desc">Cientistas que validam o conteúdo das fichas (ativos).</p>
+      </a>
+    </section>
+    <aside class="alertas">
+      <h2 id="t-alertas">A precisar de atenção</h2>
+      <ul id="lista-alertas"></ul>
+    </aside>
+  </main>
+  <footer class="rodape">
+    <p>Animalec &middot; protótipo back-office (Tarefa 3.1b) &middot; dados simulados &middot;
+      <button class="botao neutro" type="button" data-acao="repor" style="padding:2px 8px;font-size:.7rem">Repor dados</button></p>
+  </footer>
+</body>
+</html>

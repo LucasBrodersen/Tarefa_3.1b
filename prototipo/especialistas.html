@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Especialistas · Animalec</title>
+  <link rel="icon" href="img/animalec.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-pagina="lista-especialistas">
+  <header class="topo">
+    <div class="topo-interno">
+      <a class="marca" href="admin.html"><img src="img/animalec.png" alt=""><span>ANIMALEC<small>Gestão (back-office)</small></span></a>
+      <nav class="menu">
+        <ul>
+          <li><a href="admin.html">Painel</a></li>
+          <li><a href="animais.html">Animais</a></li>
+          <li><a href="patrocinadores.html">Patrocinadores <span class="novo">NOVO</span></a></li>
+          <li><a href="especialistas.html" aria-current="page">Especialistas <span class="novo">NOVO</span></a></li>
+          <li><a href="existente.html?bloco=utilizadores">Utilizadores</a></li>
+          <li><a href="existente.html?bloco=quizzes">Quizzes</a></li>
+          <li><a href="#" data-acao="sair">Sair</a></li>
+        </ul>
+      </nav>
+      <details class="menu-movel">
+        <summary>Menu</summary>
+        <ul>
+          <li><a href="admin.html">Painel</a></li>
+          <li><a href="animais.html">Animais</a></li>
+          <li><a href="patrocinadores.html">Patrocinadores</a></li>
+          <li><a href="especialistas.html" aria-current="page">Especialistas</a></li>
+          <li><a href="existente.html?bloco=utilizadores">Utilizadores</a></li>
+          <li><a href="existente.html?bloco=quizzes">Quizzes</a></li>
+          <li><a href="#" data-acao="sair">Sair</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+  <main id="conteudo">
+    <nav class="migalhas" aria-label="Localização"><ol><li><a href="admin.html">Painel</a></li><li id="migalha-atual" aria-current="page">Especialistas</li></ol></nav>
+    <div class="cabecalho-pagina">
+      <div><h1>Gestão de especialistas</h1><p>Cientistas que garantem o rigor das fichas e dos quizzes.</p></div>
+      <div><a class="botao cheio" href="especialista.html">Adicionar especialista</a> <a class="botao" href="admin.html">Menu principal</a></div>
+    </div>
+    <form id="filtros" class="filtros" onsubmit="return false">
+      <label>Pesquisar<input name="pesquisa" type="search" placeholder="Nome ou instituição…"></label>
+      <label>Especialidade
+        <select name="especialidade"><option value="">Todas</option><option>mamífero</option><option>ave</option><option>réptil</option><option>anfíbio</option><option>peixe</option><option>invertebrado</option></select>
+      </label>
+      <output id="total"></output>
+    </form>
+    <div class="tabela-contentor">
+      <table id="tabela">
+        <caption>Uma ficha validada há mais de um ano aparece como "por rever"</caption>
+        <thead><tr><th scope="col">Nome</th><th scope="col">Especialidade</th><th scope="col">Acompanha</th><th scope="col">Revisões</th><th scope="col">Quizzes</th><th scope="col">Ações</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+  <footer class="rodape">
+    <p>Animalec &middot; protótipo back-office (Tarefa 3.1b) &middot; dados simulados &middot;
+      <button class="botao neutro" type="button" data-acao="repor" style="padding:2px 8px;font-size:.7rem">Repor dados</button></p>
+  </footer>
+  <dialog id="dialogo-ver">
+    <header><h2 id="dlg-ver-titulo">Detalhe</h2><button class="fechar" type="button" data-fechar>×</button></header>
+    <div class="corpo"><dl></dl></div>
+    <footer><button class="botao neutro" type="button" data-fechar>Fechar</button></footer>
+  </dialog>
+  <dialog id="dialogo-remover">
+    <form method="dialog">
+      <header><h2 id="dlg-rem-titulo">Confirmar remoção</h2></header>
+      <div class="corpo"><p></p></div>
+      <footer><button class="botao neutro" value="nao">Cancelar</button><button class="botao perigo" value="sim">Remover</button></footer>
+    </form>
+  </dialog>
+</body>
+</html>

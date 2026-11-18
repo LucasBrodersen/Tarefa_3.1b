@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<title>Wireframes · Patrocinadores e Especialistas · Animalec</title>
+<style>
+  /* Baixa fidelidade: só cinzentos, caixas e texto de exemplo. Sem cores, sem imagens, sem marca. */
+  body { font-family: "Comic Neue", "Segoe Print", "DejaVu Sans", sans-serif; background: #fff; color: #333; margin: 0; padding: 24px; }
+  h1 { font-size: 20px; margin: 0 0 4px; } .sub { color: #777; margin: 0 0 18px; font-size: 13px; }
+  .folha { display: none; } .folha.ativa { display: block; }
+  .par { display: flex; gap: 28px; align-items: flex-start; }
+  .rotulo { font-size: 12px; font-weight: bold; color: #555; margin: 0 0 6px; text-transform: uppercase; letter-spacing: .05em; }
+  .ecra { border: 2px solid #444; border-radius: 6px; background: #fff; overflow: hidden; }
+  .desk { width: 860px; } .mob { width: 260px; border-radius: 22px; padding-bottom: 10px; }
+  .barra { background: #ddd; border-bottom: 2px solid #444; height: 38px; display: flex; align-items: center; gap: 8px; padding: 0 10px; font-size: 12px; }
+  .barra .logo { width: 26px; height: 26px; border: 2px solid #444; border-radius: 50%; background: #fff; }
+  .barra .item { border: 1.5px solid #888; border-radius: 4px; padding: 2px 6px; background: #fff; }
+  .barra .item.on { background: #999; color: #fff; }
+  .barra .esp { flex: 1; }
+  .zona { padding: 12px 14px; }
+  .t { height: 14px; background: #888; width: 40%; border-radius: 2px; margin: 4px 0 8px; }
+  .l { height: 8px; background: #ccc; border-radius: 2px; margin: 5px 0; }
+  .btn { display: inline-block; border: 1.5px solid #555; border-radius: 4px; padding: 3px 8px; font-size: 11px; margin: 2px 3px 2px 0; background: #fff; }
+  .btn.f { background: #777; color: #fff; }
+  .x { border: 1.5px solid #999; background: repeating-linear-gradient(45deg, #f2f2f2, #f2f2f2 6px, #e6e6e6 6px, #e6e6e6 12px); }
+  .grelha3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .grelha2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .card { border: 1.5px solid #666; border-radius: 4px; padding: 6px; font-size: 11px; text-align: center; }
+  .card .ic { width: 34px; height: 34px; margin: 6px auto; border-radius: 50%; }
+  .card.novo { border-width: 3px; border-style: dashed; }
+  table { width: 100%; border-collapse: collapse; font-size: 11px; }
+  th { background: #bbb; text-align: left; padding: 5px; border: 1px solid #888; }
+  td { border: 1px solid #bbb; padding: 5px; height: 26px; }
+  .campo { margin: 6px 0; font-size: 11px; } .campo .in { height: 22px; border: 1.5px solid #888; border-radius: 3px; margin-top: 2px; background: #fff; }
+  .fs { border: 1.5px dashed #888; border-radius: 4px; padding: 6px 8px 8px; margin: 8px 0; position: relative; }
+  .fs > b { position: absolute; top: -9px; left: 8px; background: #fff; padding: 0 4px; font-size: 11px; }
+  .chk { display: inline-block; width: 10px; height: 10px; border: 1.5px solid #555; margin-right: 4px; vertical-align: middle; }
+  .nota { font-size: 11px; color: #c00; font-family: "DejaVu Sans", sans-serif; }
+  .cartao { border: 1.5px solid #888; border-radius: 4px; padding: 6px; margin: 6px 0; font-size: 10.5px; }
+  .anot { width: 230px; font-family: "DejaVu Sans", sans-serif; font-size: 12px; }
+  .anot ol { padding-left: 18px; margin: 0; } .anot li { margin-bottom: 6px; }
+  .num { display: inline-grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; background: #c00; color: #fff; font-size: 10px; font-family: "DejaVu Sans", sans-serif; vertical-align: middle; margin-left: 4px; }
+  .modal { border: 2px solid #444; border-radius: 6px; width: 300px; margin: 10px auto; background: #fff; box-shadow: 4px 4px 0 #bbb; }
+  .modal .mt { background: #999; color: #fff; padding: 4px 8px; font-size: 11px; }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="titulo"></h1>
+  <p class="sub">Wireframe (baixa fidelidade) · Animalec, página de administração · Tarefa 3.1 b · os números <span class="num">1</span> remetem para as notas</p>
+</header>
+
+<!-- ================= PAINEL ================= -->
+<section class="folha" id="painel" data-titulo="Wireframe 1 · Painel de gestão com os dois novos blocos">
+  <div class="par">
+    <div><p class="rotulo">Browser (≥ 768 px)</p>
+      <div class="ecra desk">
+        <div class="barra"><span class="logo"></span><b>ANIMALEC</b><span class="esp"></span><span class="item on">Painel</span><span class="item">Animais</span><span class="item">Patrocinadores</span><span class="item">Especialistas</span><span class="item">Utilizadores</span><span class="item">Quizzes</span><span class="item">Sair</span></div>
+        <div class="zona">
+          <div class="t"></div><div class="l" style="width:55%"></div>
+          <div class="grelha3" style="margin-top:12px">
+            <div class="card">UTILIZADORES<div class="ic x"></div><b>nº</b><div class="l"></div></div>
+            <div class="card">ANIMAIS<div class="ic x"></div><b>nº</b><div class="l"></div></div>
+            <div class="card">QUIZZES<div class="ic x"></div><b>nº</b><div class="l"></div></div>
+            <div class="card">QUESTÕES<div class="ic x"></div><b>nº</b><div class="l"></div></div>
+            <div class="card novo">PATROCINADORES <span class="num">1</span><div class="ic x"></div><b>nº ativos</b><div class="l"></div></div>
+            <div class="card novo">ESPECIALISTAS <span class="num">1</span><div class="ic x"></div><b>nº ativos</b><div class="l"></div></div>
+          </div>
+          <div class="fs" style="margin-top:14px"><b>A precisar de atenção <span class="num">2</span></b><div class="l" style="width:70%"></div><div class="l" style="width:60%"></div><div class="l" style="width:50%"></div></div>
+        </div>
+      </div></div>
+    <div><p class="rotulo">Telemóvel (&lt; 768 px)</p>
+      <div class="ecra mob">
+        <div class="barra"><span class="logo"></span><b>ANIMALEC</b><span class="esp"></span><span class="item"> Menu <span class="num">3</span></span></div>
+        <div class="zona"><div class="t" style="width:70%"></div>
+          <div class="grelha2">
+            <div class="card">UTIL.<div class="ic x"></div><b>nº</b></div><div class="card">ANIMAIS<div class="ic x"></div><b>nº</b></div>
+            <div class="card">QUIZZES<div class="ic x"></div><b>nº</b></div><div class="card">QUESTÕES<div class="ic x"></div><b>nº</b></div>
+            <div class="card novo">PATROC.<div class="ic x"></div><b>nº</b></div><div class="card novo">ESPEC.<div class="ic x"></div><b>nº</b></div>
+          </div>
+          <div class="fs"><b>Atenção</b><div class="l"></div><div class="l"></div></div>
+        </div>
+      </div></div>
+    <div class="anot"><p class="rotulo">Notas</p><ol>
+      <li>Os dois blocos novos seguem o mesmo padrão dos quatro existentes (título, ícone, contagem), para não criar um segundo estilo de navegação.</li>
+      <li>Caixa de alertas: animais sem padrinho, fichas por validar e apoios a terminar. É aqui que as entidades novas "falam" com os animais.</li>
+      <li>No telemóvel o menu recolhe num botão e os blocos passam a 2 colunas, sem descrição.</li>
+    </ol></div>
+  </div>
+</section>
+
+<!-- ================= PATROCINADORES ================= -->
+<section class="folha" id="patrocinadores" data-titulo="Wireframe 2 · Patrocinadores (lista e formulário)">
+  <div class="par">
+    <div><p class="rotulo">Browser · lista</p>
+      <div class="ecra desk">
+        <div class="barra"><span class="logo"></span><b>ANIMALEC</b><span class="esp"></span><span class="item">Painel</span><span class="item">Animais</span><span class="item on">Patrocinadores</span><span class="item">Especialistas</span><span class="item">…</span></div>
+        <div class="zona">
+          <div class="l" style="width:20%"></div><div class="t" style="width:35%"></div>
+          <div style="text-align:right"><span class="btn f">+ ADICIONAR PATROCINADOR</span><span class="btn"> MENU PRINCIPAL</span></div>
+          <div class="fs"><b>Filtros <span class="num">1</span></b>[ pesquisar… ] [ modalidade ▾ ] [ estado ▾ ] <span style="float:right">nº · total €/ano</span></div>
+          <table><tr><th>NOME / tipo</th><th>MODALIDADE <span class="num">2</span></th><th>ANIMAIS</th><th>VALOR/ANO</th><th>PERÍODO</th><th>ESTADO</th><th>AÇÕES</th></tr>
+            <tr><td>Mar Limpo<br>ONG</td><td>[apadrinhamento]</td><td>(tartaruga)</td><td>1200 €</td><td>01/01–31/12</td><td>[ativo]</td><td><span class="btn">EDITAR</span><span class="btn">VER</span><span class="btn">REMOVER</span></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="btn">EDITAR</span><span class="btn">VER</span><span class="btn">REMOVER</span></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="btn">EDITAR</span><span class="btn">VER</span><span class="btn">REMOVER</span></td></tr></table>
+          <div class="modal"><div class="mt">REMOVER? <span class="num">3</span></div><div class="zona" style="font-size:11px">"Os animais deixam de mostrar este apoio."<br><span class="btn">CANCELAR</span><span class="btn f">REMOVER</span></div></div>
+        </div></div>
+      <p class="rotulo" style="margin-top:14px">Browser · formulário (adicionar / editar)</p>
+      <div class="ecra desk"><div class="zona">
+        <div class="t" style="width:30%"></div>
+        <div class="fs"><b>Identificação</b><div class="grelha2"><div class="campo">Nome *<div class="in"></div></div><div class="campo">Tipo * ▾<div class="in"></div></div><div class="campo">Email *<div class="in"></div></div><div class="campo">Website<div class="in"></div></div></div></div>
+        <div class="fs"><b>Apoio <span class="num">4</span></b><div class="grelha2"><div class="campo">Modalidade * ▾<div class="in"></div></div><div class="campo">Valor (€) *<div class="in"></div></div><div class="campo">Início *<div class="in"></div></div><div class="campo">Fim *<div class="in"></div></div></div>
+          <div class="campo">Animais apoiados <span class="num">5</span></div><div><span class="chk"></span>cão <span class="chk"></span>gato <span class="chk"></span>pardal <span class="chk"></span>lince … </div>
+          <div class="campo"><span class="chk"></span>Mostrar na ficha pública</div></div>
+        <div class="fs"><b>Gestão</b><div class="campo">Notas internas<div class="in" style="height:34px"></div></div><span class="chk"></span>Ativo</div>
+        <div style="text-align:right"><span class="btn">CANCELAR</span><span class="btn f">GUARDAR</span></div>
+      </div></div>
+    </div>
+    <div><p class="rotulo">Telemóvel · lista <span class="num">6</span></p>
+      <div class="ecra mob"><div class="barra"><span class="logo"></span><b>ANIMALEC</b><span class="esp"></span><span class="item"></span></div>
+        <div class="zona"><div class="t" style="width:80%"></div><span class="btn f">+ ADICIONAR</span><div class="fs"><b>Filtros</b><div class="in" style="height:18px;border:1.5px solid #888"></div></div>
+          <div class="cartao"><b>Mar Limpo</b> · ONG<br>MODALIDADE [apadrinhamento]<br>ANIMAIS (tartaruga)<br>VALOR 1200 €<br><span class="btn">EDITAR</span><span class="btn">VER</span><span class="btn">REMOVER</span></div>
+          <div class="cartao"><div class="l"></div><div class="l"></div><div class="l"></div><span class="btn">EDITAR</span><span class="btn">VER</span><span class="btn">REMOVER</span></div>
+        </div></div>
+      <p class="rotulo" style="margin-top:14px">Telemóvel · formulário</p>
+      <div class="ecra mob"><div class="zona">
+        <div class="t" style="width:80%"></div>
+        <div class="campo">Nome *<div class="in"></div></div><div class="campo">Tipo *<div class="in"></div></div><div class="campo">Email *<div class="in"></div></div>
+        <div class="campo">Modalidade *<div class="in"></div></div><div class="campo">Valor *<div class="in"></div></div><div class="campo">Início * / Fim *<div class="in"></div></div>
+        <div class="campo">Animais<div class="in" style="height:44px"></div></div>
+        <span class="btn" style="width:42%">CANCELAR</span><span class="btn f" style="width:42%">GUARDAR</span>
+      </div></div>
+    </div>
+    <div class="anot"><p class="rotulo">Notas</p><ol>
+      <li>Filtros e total de apoio ativo: o administrador quer saber "quanto entra" sem exportar dados.</li>
+      <li>A modalidade separa três relações diferentes com o projeto: apadrinhar um animal, dar um donativo ou patrocinar um quiz.</li>
+      <li>Ações iguais às do livro (EDITAR, VER, REMOVER). Remover pede confirmação e explica a consequência.</li>
+      <li>Num donativo pontual o campo "Fim" desaparece e o valor deixa de ser anual.</li>
+      <li>Relação N:N com animais: um patrocinador pode apoiar vários animais e vice-versa.</li>
+      <li>No telemóvel a tabela passa a cartões (um por patrocinador) e os botões ocupam a largura toda.</li>
+    </ol></div>
+  </div>
+</section>
+
+<!-- ================= ESPECIALISTAS ================= -->
+<section class="folha" id="especialistas" data-titulo="Wireframe 3 · Especialistas (lista, formulário e efeito na ficha do animal)">
+  <div class="par">
+    <div><p class="rotulo">Browser · lista</p>
+      <div class="ecra desk">
+        <div class="barra"><span class="logo"></span><b>ANIMALEC</b><span class="esp"></span><span class="item">Painel</span><span class="item">Animais</span><span class="item">Patrocinadores</span><span class="item on">Especialistas</span><span class="item">…</span></div>
+        <div class="zona">
+          <div class="t" style="width:35%"></div>
+          <div style="text-align:right"><span class="btn f">+ ADICIONAR ESPECIALISTA</span><span class="btn"> MENU PRINCIPAL</span></div>
+          <div class="fs"><b>Filtros</b>[ pesquisar… ] [ especialidade ▾ ]</div>
+          <table><tr><th>NOME / instituição</th><th>ESPECIALIDADE</th><th>ACOMPANHA</th><th>REVISÕES <span class="num">1</span></th><th>QUIZZES</th><th>AÇÕES</th></tr>
+            <tr><td>Dra. Ana Ribeiro<br>Univ. Évora</td><td>mamífero</td><td>(lince) (lobo)</td><td>[1 por rever]</td><td>valida</td><td><span class="btn">EDITAR</span><span class="btn">VER</span><span class="btn">REMOVER</span></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td><span class="btn">EDITAR</span><span class="btn">VER</span><span class="btn">REMOVER</span></td></tr></table>
+        </div></div>
+      <p class="rotulo" style="margin-top:14px">Browser · formulário</p>
+      <div class="ecra desk"><div class="zona">
+        <div class="t" style="width:30%"></div>
+        <div class="fs"><b>Identificação</b><div class="grelha2"><div class="campo">Nome *<div class="in"></div></div><div class="campo">Grau académico * ▾<div class="in"></div></div><div class="campo">Instituição * (sugestões) <span class="num">2</span><div class="in"></div></div><div class="campo">Email *<div class="in"></div></div><div class="campo">ORCID (formato validado) <span class="num">3</span><div class="in"></div></div></div></div>
+        <div class="fs"><b>Área científica</b><div class="grelha2"><div class="campo">Especialidade (grupo) * ▾<div class="in"></div></div><div class="campo"><span class="chk"></span>mostrar todos os grupos</div></div>
+          <div class="campo">Animais que acompanha <span class="num">4</span></div><div><span class="chk"></span>lince <span class="chk"></span>lobo <span class="chk"></span>cão …</div>
+          <div class="campo"><span class="chk"></span>Registar validação hoje <span class="num">5</span> &nbsp; <span class="chk"></span>Valida quizzes &nbsp; <span class="chk"></span>Ativo</div>
+          <div class="campo">Nota biográfica<div class="in" style="height:30px"></div></div></div>
+        <div style="text-align:right"><span class="btn">CANCELAR</span><span class="btn f">GUARDAR</span></div>
+      </div></div>
+    </div>
+    <div><p class="rotulo">Telemóvel · lista</p>
+      <div class="ecra mob"><div class="barra"><span class="logo"></span><b>ANIMALEC</b><span class="esp"></span><span class="item"></span></div>
+        <div class="zona"><div class="t" style="width:80%"></div><span class="btn f">+ ADICIONAR</span>
+          <div class="cartao"><b>Dra. Ana Ribeiro</b><br>ESPECIALIDADE mamífero<br>ACOMPANHA (lince)(lobo)<br>REVISÕES [1 por rever]<br><span class="btn">EDITAR</span><span class="btn">VER</span><span class="btn">REMOVER</span></div>
+          <div class="cartao"><div class="l"></div><div class="l"></div><span class="btn">EDITAR</span><span class="btn">VER</span><span class="btn">REMOVER</span></div>
+        </div></div>
+      <p class="rotulo" style="margin-top:14px">Telemóvel · ficha pública do animal <span class="num">6</span></p>
+      <div class="ecra mob"><div class="zona">
+        <div class="x" style="height:60px;border-radius:4px"></div><div class="t" style="width:60%"></div><div class="l"></div><div class="l"></div>
+        <div class="fs"><b>Validação científica</b> revisto por Dra. … em dd/mm/aaaa</div>
+        <div class="fs"><b>Padrinhos</b>[logo] Mar Limpo · apadrinhamento</div>
+      </div></div>
+    </div>
+    <div class="anot"><p class="rotulo">Notas</p><ol>
+      <li>A coluna de revisões resume o estado: uma validação com mais de um ano conta como "por rever".</li>
+      <li>Instituição com sugestões (datalist) para evitar grafias diferentes da mesma universidade.</li>
+      <li>ORCID opcional, com o formato verificado pelo próprio browser.</li>
+      <li>A lista de animais filtra-se pelo grupo da especialidade, mas pode alargar-se (ex.: um ornitólogo que acompanha um anfíbio).</li>
+      <li>"Registar validação hoje" é o gesto que alimenta o selo da ficha e os alertas do painel.</li>
+      <li>Efeito no front-office: a ficha mostra quem validou o conteúdo e quem o apoia.</li>
+    </ol></div>
+  </div>
+</section>
+<script>
+  const id = location.hash.slice(1) || "painel";
+  const s = document.getElementById(id); s.classList.add("ativa");
+  document.getElementById("titulo").textContent = s.dataset.titulo;
+</script>
+</body>
+</html>

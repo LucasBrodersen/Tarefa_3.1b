@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animais · Animalec</title>
+  <link rel="icon" href="img/animalec.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-pagina="lista-animais">
+  <header class="topo">
+    <div class="topo-interno">
+      <a class="marca" href="admin.html"><img src="img/animalec.png" alt=""><span>ANIMALEC<small>Gestão (back-office)</small></span></a>
+      <nav class="menu">
+        <ul>
+          <li><a href="admin.html">Painel</a></li>
+          <li><a href="animais.html" aria-current="page">Animais</a></li>
+          <li><a href="patrocinadores.html">Patrocinadores <span class="novo">NOVO</span></a></li>
+          <li><a href="especialistas.html">Especialistas <span class="novo">NOVO</span></a></li>
+          <li><a href="existente.html?bloco=utilizadores">Utilizadores</a></li>
+          <li><a href="existente.html?bloco=quizzes">Quizzes</a></li>
+          <li><a href="#" data-acao="sair">Sair</a></li>
+        </ul>
+      </nav>
+      <details class="menu-movel">
+        <summary>Menu</summary>
+        <ul>
+          <li><a href="admin.html">Painel</a></li>
+          <li><a href="animais.html" aria-current="page">Animais</a></li>
+          <li><a href="patrocinadores.html">Patrocinadores</a></li>
+          <li><a href="especialistas.html">Especialistas</a></li>
+          <li><a href="existente.html?bloco=utilizadores">Utilizadores</a></li>
+          <li><a href="existente.html?bloco=quizzes">Quizzes</a></li>
+          <li><a href="#" data-acao="sair">Sair</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+  <main id="conteudo">
+    <nav class="migalhas" aria-label="Localização"><ol><li><a href="admin.html">Painel</a></li><li id="migalha-atual" aria-current="page">Animais</li></ol></nav>
+    <div class="cabecalho-pagina">
+      <div><h1>Gestão de animais</h1><p>Bloco existente do livro, agora com duas colunas novas: patrocínio e validação científica.</p></div>
+      <div><a class="botao" href="admin.html">Menu principal</a></div>
+    </div>
+    <p id="aviso-filtro" class="alertas" hidden>A mostrar só as fichas sem validação em dia. <a href="animais.html">Ver todas</a></p>
+    <div class="tabela-contentor">
+      <table id="tabela">
+        <caption>Fichas de animais</caption>
+        <thead><tr><th scope="col">Nome</th><th scope="col">Grupo</th><th scope="col">Nível</th><th scope="col">Patrocínio</th><th scope="col">Validação</th><th scope="col">Ações</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+  <footer class="rodape">
+    <p>Animalec &middot; protótipo back-office (Tarefa 3.1b) &middot; dados simulados &middot;
+      <button class="botao neutro" type="button" data-acao="repor" style="padding:2px 8px;font-size:.7rem">Repor dados</button></p>
+  </footer>
+</body>
+</html>

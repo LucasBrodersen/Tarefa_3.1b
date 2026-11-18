@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adicionar especialista · Animalec</title>
+  <link rel="icon" href="img/animalec.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-pagina="form-especialista">
+  <header class="topo">
+    <div class="topo-interno">
+      <a class="marca" href="admin.html"><img src="img/animalec.png" alt=""><span>ANIMALEC<small>Gestão (back-office)</small></span></a>
+      <nav class="menu">
+        <ul>
+          <li><a href="admin.html">Painel</a></li>
+          <li><a href="animais.html">Animais</a></li>
+          <li><a href="patrocinadores.html">Patrocinadores <span class="novo">NOVO</span></a></li>
+          <li><a href="especialistas.html" aria-current="page">Especialistas <span class="novo">NOVO</span></a></li>
+          <li><a href="existente.html?bloco=utilizadores">Utilizadores</a></li>
+          <li><a href="existente.html?bloco=quizzes">Quizzes</a></li>
+          <li><a href="#" data-acao="sair">Sair</a></li>
+        </ul>
+      </nav>
+      <details class="menu-movel">
+        <summary>Menu</summary>
+        <ul>
+          <li><a href="admin.html">Painel</a></li>
+          <li><a href="animais.html">Animais</a></li>
+          <li><a href="patrocinadores.html">Patrocinadores</a></li>
+          <li><a href="especialistas.html" aria-current="page">Especialistas</a></li>
+          <li><a href="existente.html?bloco=utilizadores">Utilizadores</a></li>
+          <li><a href="existente.html?bloco=quizzes">Quizzes</a></li>
+          <li><a href="#" data-acao="sair">Sair</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+  <main id="conteudo">
+    <nav class="migalhas" aria-label="Localização"><ol><li><a href="admin.html">Painel</a></li><li><a href="especialistas.html">Especialistas</a></li><li id="migalha-atual" aria-current="page">Adicionar</li></ol></nav>
+    <div class="cabecalho-pagina"><div><h1 id="titulo">Adicionar especialista</h1><p>Os campos com * são obrigatórios.</p></div></div>
+    <form id="form" class="ficha" novalidate>
+      <fieldset>
+        <legend>Identificação</legend>
+        <div class="grelha">
+          <div class="campo"><label class="obrig" for="nome">Nome</label><input id="nome" name="nome" required maxlength="80" autocomplete="name"></div>
+          <div class="campo"><label class="obrig" for="titulo-ac">Grau académico</label>
+            <select id="titulo-ac" name="titulo" required><option>Doutora</option><option>Doutor</option><option>Mestre</option><option>Licenciada</option><option>Licenciado</option></select></div>
+          <div class="campo"><label class="obrig" for="instituicao">Instituição</label><input id="instituicao" name="instituicao" required list="instituicoes">
+            <datalist id="instituicoes"><option value="Universidade de Évora"><option value="Universidade de Trás-os-Montes e Alto Douro"><option value="Centro de Estudos de Aves"><option value="Aquário Vasco da Gama"><option value="Instituto da Conservação da Natureza e das Florestas"></datalist></div>
+          <div class="campo"><label class="obrig" for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+          <div class="campo"><label for="orcid">ORCID</label><input id="orcid" name="orcid" pattern="\d{4}-\d{4}-\d{4}-\d{3}[\dX]" placeholder="0000-0000-0000-0000"><small>Identificador público de investigador (opcional).</small></div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Área científica</legend>
+        <div class="grelha">
+          <div class="campo"><label class="obrig" for="especialidade">Especialidade (grupo)</label>
+            <select id="especialidade" name="especialidade" required><option>mamífero</option><option>ave</option><option>réptil</option><option>anfíbio</option><option>peixe</option><option>invertebrado</option></select></div>
+          <div class="campo"><label><input type="checkbox" name="todos"> Mostrar animais de todos os grupos</label><small>Por omissão mostram-se só os do grupo da especialidade.</small></div>
+          <div class="campo inteira"><span class="campo"><label>Animais que acompanha</label></span>
+            <div id="lista-animais" class="lista-animais" role="group"></div></div>
+          <div class="campo inteira"><label><input type="checkbox" name="validadoHoje"> Registar que validou hoje as fichas dos animais escolhidos</label></div>
+          <div class="campo"><label><input type="checkbox" name="validaQuizzes"> Também valida as questões dos quizzes</label></div>
+          <div class="campo"><label><input type="checkbox" name="ativo" checked> Especialista ativo</label></div>
+          <div class="campo inteira"><label for="bio">Nota biográfica</label><textarea id="bio" name="bio" rows="3" maxlength="300"></textarea></div>
+        </div>
+      </fieldset>
+      <p id="erro" class="erro-form"></p>
+      <div class="acoes-form"><a class="botao neutro" href="especialistas.html">Cancelar</a><button class="botao cheio" type="submit">Guardar</button></div>
+    </form>
+  </main>
+  <footer class="rodape">
+    <p>Animalec &middot; protótipo back-office (Tarefa 3.1b) &middot; dados simulados &middot;
+      <button class="botao neutro" type="button" data-acao="repor" style="padding:2px 8px;font-size:.7rem">Repor dados</button></p>
+  </footer>
+</body>
+</html>
